@@ -77,6 +77,7 @@ parameters <- c(r = .75, alpha = 0.8, beta = 0.5, q = 1)
 # Recall: V = prey, P = predator
 init_cond <- c(V = 10, P = 4)
 
+
 # Prepare the series of differential equations as a function ----
 lv_equations <- function(time, init_cond, parameters) {
   with(as.list(c(init_cond, parameters)), {
@@ -109,3 +110,5 @@ ggplot(data = approx_lk_df, aes(x = time, y = population)) +
 What happens as you change the initial conditions and / or parameters (and re-run the entire code chunk)? How does that align with what you see in the graph? 
 
 It can be helpful to change just **one** value at a time and observe it's effects -- do the changes in predator / prey dynamics make sense, based on your changes?
+
+#New changes
